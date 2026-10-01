@@ -1,0 +1,32 @@
+# Kredensial & secret — JANGAN PERNAH di-commit
+.env
+*.env
+**/.env
+*.key
+*.token
+.tunnel-hostname
+.dashboard-pw
+
+# Log
+*.log
+logs/
+
+# Data runtime Hermes / 9Router
+.hermes/
+9router-data/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*~
+*.swp
+.idea/
+.vscode/
+
+# Backup
+*.bak
+*.orig
