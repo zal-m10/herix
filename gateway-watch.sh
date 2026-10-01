@@ -33,7 +33,7 @@
 #                      cek koneksi (hanya pakai aktivitas log).
 #
 # Cron yang disarankan (tiap 5 menit):
-#   */5 * * * * /path/ke/Hermuse/gateway-watch.sh
+#   */5 * * * * /path/ke/Herix/gateway-watch.sh
 # Log: gateway-watch.log di folder ini (hanya aksi/perubahan).
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

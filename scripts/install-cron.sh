@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# install-cron.sh — pasang jadwal otomatis (cron) untuk Hermuse.
+# install-cron.sh — pasang jadwal otomatis (cron) untuk Herix.
 #
 # PENJELASAN SINGKAT (buat yang baru belajar):
 #   "cron" adalah alarm bawaan Linux: "jalankan perintah ini tiap X menit".

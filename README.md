@@ -1,6 +1,6 @@
-# Hermuse — edisi Zero Trust Tunnel
+# Herix — edisi Zero Trust Tunnel
 
-**Hermuse = Hermes + Muse.** Repo ini berisi script dan panduan untuk menjalankan **bot Telegram AI pribadi** (Hermes Agent dari Nous Research) + **dashboard model AI** (9Router) di server sendiri, online 24/7.
+**Herix = Hermes + Razix.** Repo ini berisi script dan panduan untuk menjalankan **bot Telegram AI pribadi** (Hermes Agent dari Nous Research) + **dashboard model AI** (9Router) di server sendiri, online 24/7.
 
 > **Versi modifikasi** dari [imkofty/Hermuse](https://github.com/imkofty/Hermuse) (lisensi MIT).
 > Perubahan utama: tunnel dashboard **diganti total** dari Cloudflare Workers + D1
@@ -114,8 +114,8 @@ Istilah yang akan sering muncul:
 Di VPS, jalankan:
 
 ```bash
-git clone https://github.com/<akun-kamu>/hermuse-zerotrust
-cd hermuse-zerotrust
+git clone https://github.com/zal-m10/herix
+cd herix
 bash scripts/install.sh
 ```
 
@@ -134,7 +134,7 @@ Token ini cukup dibuat **sekali**. Buka di browser:
 
 1. Masuk ke [one.dash.cloudflare.com](https://one.dash.cloudflare.com)
 2. Menu kiri → **Networks** → **Tunnels** → **Create a tunnel**
-3. Pilih **Cloudflared**, beri nama mis. `hermuse`, klik **Save tunnel**
+3. Pilih **Cloudflared**, beri nama mis. `herix`, klik **Save tunnel**
 4. Di halaman berikutnya ada **kolom token** (string panjang) → **salin**,
    simpan sementara di notepad. **Jangan dibagikan ke siapa pun.**
 5. Klik **Save** (atau tutup halaman — tokennya yang penting sudah disalin)
@@ -162,7 +162,7 @@ Script akan:
 4. Menampilkan panduan menambahkan **Public Hostname** di dashboard —
    lakukan ini sekarang di browser:
    - [one.dash.cloudflare.com](https://one.dash.cloudflare.com) → Networks →
-     Tunnels → pilih tunnel `hermuse` → tab **Public Hostname** →
+     Tunnels → pilih tunnel `herix` → tab **Public Hostname** →
      **Add a public hostname**
    - Hostname: `ai` + domain kamu (hasilnya `ai.domainkamu.my.id`)
    - Service Type: **HTTP** — URL: **`127.0.0.1:20128`**
@@ -269,7 +269,7 @@ pgrep -f "[g]ateway.*run" >/dev/null && echo "OK gateway"
 pgrep -f "supervise[.]sh" >/dev/null && echo "OK supervise"
 
 echo "--- Cron ---"
-crontab -l | grep -c "hermuse-zerotrust" | xargs -I{} echo "OK cron ({} baris)"
+crontab -l | grep -c "herix-zerotrust" | xargs -I{} echo "OK cron ({} baris)"
 ```
 
 Lalu buka `https://ai.domainkamu.my.id/login` di browser dan chat bot-mu di
@@ -353,7 +353,7 @@ pkill -f "supervise[.]sh"; pkill -f "/start-9router.sh"; pkill -f "cloudflared.*
 ## Layout file
 
 ```
-Hermuse/
+Herix/
 ├── scripts/
 │   ├── install.sh        # install otomatis: Node, Hermes, 9Router, cloudflared
 │   ├── setup-tunnel.sh   # pasang Zero Trust Tunnel (token + hostname + tes)

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# supervise.sh — PENJAGA PROSES Hermuse.
+# supervise.sh — PENJAGA PROSES Herix.
 #
 # PENJELASAN SINGKAT (buat yang baru belajar):
 #   Program bisa mati sendiri (crash, kehabisan memori, server reboot).

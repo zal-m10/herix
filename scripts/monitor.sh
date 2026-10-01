@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# monitor.sh — PEMANTAU KESEHATAN Hermuse (dijalankan cron tiap 10 menit).
+# monitor.sh — PEMANTAU KESEHATAN Herix (dijalankan cron tiap 10 menit).
 #
 # PENJELASAN SINGKAT (buat yang baru belajar):
 #   supervise.sh menjaga proses dari DALAM (tiap 30 detik). Script ini
@@ -38,7 +38,7 @@ notify() { # $1 = pesan
   log "NOTIFY: $1"
   if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ]; then
     curl -s -m 15 -o /dev/null \
-      -d "chat_id=${TELEGRAM_CHAT_ID}" -d "text=[Hermuse monitor] $1" \
+      -d "chat_id=${TELEGRAM_CHAT_ID}" -d "text=[Herix monitor] $1" \
       "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" || true
   fi
 }

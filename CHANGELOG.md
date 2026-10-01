@@ -4,7 +4,7 @@ Semua perubahan penting di repo ini dicatat di sini, format ala Keep a Changelog
 
 ## Kandidat update berikutnya
 - Script autopanen: panen endpoint AI gratisan (OpenAI-compatible) secara berkala dan daftarkan otomatis sebagai provider 9Router. Arsitektur routing: **hasil panen sebagai jalur utama, Nous sebagai fallback** (kebalik dari asumsi awal).
-- `hermuse-doctor`: script cek kesehatan all-in-one.
+- `herix-doctor`: script cek kesehatan all-in-one.
 - Installer satu baris.
 
 ## [Unreleased]
@@ -44,7 +44,7 @@ Semua perubahan penting di repo ini dicatat di sini, format ala Keep a Changelog
 - `gateway-watch.sh` — watchdog anti-stall untuk Telegram gateway: 3 lapis deteksi (PID hilang, heartbeat event-loop basi, 0 aktivitas adapter Telegram 15 menit dengan konfirmasi 2 run), aturan keras hanya kill kalau tepat 1 kandidat PID, mode `DRY_RUN=1`, tidak menyentuh 9Router. Section dokumentasi di README.
 - Section "Watchdog anti-stall gateway" di README + `gateway-watch.sh` di tabel layout file.
 - `LICENSE` (MIT) — repo publik akhirnya punya lisensi biar orang berani fork/kontribusi.
-- `scripts/start-all.sh` — starter idempoten semua komponen Hermuse (9Router, tunnel client, Telegram gateway); yang sudah jalan nggak disentuh. Siap dipanggil dari `@reboot` cron / systemd.
+- `scripts/start-all.sh` — starter idempoten semua komponen Herix (9Router, tunnel client, Telegram gateway); yang sudah jalan nggak disentuh. Siap dipanggil dari `@reboot` cron / systemd.
 - Section "Auto-start" di README — contoh `@reboot` cron dan systemd user unit.
 - `CHANGELOG.md` ini sendiri.
 
