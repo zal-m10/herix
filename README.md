@@ -111,12 +111,10 @@ Istilah yang akan sering muncul:
 
 ## Langkah 1 — Install semuanya
 
-Di VPS, jalankan:
+Di VPS, jalankan **satu baris** ini (copy-paste sekali jalan):
 
 ```bash
-git clone https://github.com/zal-m10/herix
-cd herix
-bash scripts/install.sh
+sudo apt-get update -y && sudo apt-get install -y git && git clone https://github.com/zal-m10/herix && cd herix && bash scripts/install.sh
 ```
 
 Script ini menginstall otomatis: Node.js, Hermes Agent, 9Router (versi di-pin
